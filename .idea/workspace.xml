@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0562bc63-a888-4a7b-a709-1b2be61acf5c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/about.html" afterPath="$PROJECT_DIR$/portfolio/templates/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/contact.html" afterPath="$PROJECT_DIR$/portfolio/templates/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/index.html" afterPath="$PROJECT_DIR$/portfolio/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/css/main.css" afterPath="$PROJECT_DIR$/portfolio/static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/resume.html" afterPath="$PROJECT_DIR$/portfolio/templates/resume.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/templates/spoiler.html" afterPath="$PROJECT_DIR$/portfolio/templates/spoiler.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/css/style1.css" afterPath="$PROJECT_DIR$/portfolio/static/css/style1.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/portfolio/static/js/taskdaddy.js" afterPath="$PROJECT_DIR$/portfolio/static/js/taskdaddy.js" />
     </list>
     <ignored path="zachswift.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +30,8 @@
       <file leaf-file-name="resume.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/portfolio/templates/resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.038961" vertical-offset="0" max-vertical-offset="1905">
-              <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.32467532" vertical-offset="945" max-vertical-offset="1920">
+              <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -379,8 +372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/portfolio/templates/resume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.038961" vertical-offset="0" max-vertical-offset="1905">
-          <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.32467532" vertical-offset="945" max-vertical-offset="1920">
+          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
           <folding />
         </state>
       </provider>
