@@ -1,5 +1,5 @@
 /*************************
-GENERAL 
+GENERAL
 **************************/
 
 body {
@@ -26,7 +26,7 @@ img {
 
 
 /*************************
-HEADING 
+HEADING
 **************************/
 
 header {
@@ -48,7 +48,7 @@ h1 {
   font-size: 1.75em;
   font-weight: 700;
   line-height: 0.8em;
-  
+
 }
 
 h2 {
@@ -83,7 +83,7 @@ nav a {
   padding: 15px 10px;
 }
 /*************************
-GENERAL 
+GENERAL
 **************************/
 
 footer {
@@ -123,7 +123,7 @@ PAGE PORTFOLIO
 .pichover:hover {
 
     z-index: 1;
-    background-color: black;
+    background-color: gray;
     opacity:0.7;
 }
 
@@ -132,13 +132,13 @@ PAGE PORTFOLIO
   margin: 0;
   padding: 5%;
   font-size: 0.75em;
-  color: #bdc3c7;
+  color: #335C85;
 }
 
 .githublink{
   font-size: 1.2em;
   background-color: #f5f5f5;
-  color:#bdc3c7;
+  color:#335C85;
   width:100%;
   text-align: center;
   display:inline-block;
@@ -162,7 +162,7 @@ PAGE: ABOUT
   display: inline-block;
   max-width: 150px;
   margin: 0 auto 30px;
-  border-radius: 100%;  
+  border-radius: 100%;
 }
 
 h3 {
@@ -182,7 +182,7 @@ PAGE: CONTACT
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 0.9em; 
+  font-size: 0.9em;
 }
 
 .contact-info a {
@@ -248,4 +248,3 @@ nav a, nav a:visited {
 nav a.selected, nav a:hover {
   color: #002447;
 }
-
