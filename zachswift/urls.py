@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'lightbox', 'portfolio.views.lightbox', name='lightbox'),
     url(r'taskdaddy', 'portfolio.views.taskdaddy', name='taskdaddy'),
     url(r'spoiler', 'portfolio.views.spoiler', name='spoiler'),
+    url(r'projects', 'portfolio.views.projects', name='projects'),
 
 
     #url(r'^admin/', include(admin.site.urls)),

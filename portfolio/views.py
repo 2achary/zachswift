@@ -20,3 +20,6 @@ def taskdaddy(request):
 
 def spoiler(request):
 	return render(request, 'spoiler.html')
+
+def projects(request):
+	return render(request, 'projects.html')
