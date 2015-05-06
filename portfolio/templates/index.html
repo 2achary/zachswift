@@ -1,78 +1,251 @@
 <!DOCTYPE html>
 <html>
+<!--################### begin head #################################-->
   <head>
     <meta charset="utf-8">
-    <title>Zach Swift | Web Developer</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/static/css/main.css">
-    <link rel="stylesheet" href="/static/css/responsive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/css/custom.css" rel="stylesheet">
+		<script src="/static/js/respond.js"></script>
+    <title>Zach Swift | Web Developer</title>
   </head>
+<!--################### end head #################################-->
 
+<!--################### start body #################################-->
   <body>
+    <div class="container">
+
+<!--################### begin nav bar #################################-->
+
+          <header class='page-header'>
+
+            <ul class='nav nav-pills pull-right'>
+
+                <li><a href="about" ><h4>About</h4></a></li>
 
 
-    <header>
-      <a href="/" id="logo">
-        <h1>Zach Swift</h1>
-        <h2>Web Developer</h2>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="/" class="selected">Portfolio</a></li>
-          <li><a href="about" >About</a></li>
-          <li><a href="resume">Resume</a></li>
-          <li><a href="contact" >Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+                <li><a href="resume"><h4>Resume</h4></a></li>
 
 
-    <div id="wrapper">
-      <section>
+                <li><a href="contact" ><h4>Contact</h4></a></li>
 
-        <div class="githublink">
-          <a href="http://www.github.com/2achary"><p>See the code to these and the rest of my projects on GitHub |<img src="static/img/github.png" width="25"></p></a>
+            </ul><!--end navbar-->
+            <a href="/"><h1>Zach Swift</h1></a>
+          </header>
+
+<!--################### end of header #################################-->
+
+<!--################### begin source and project links #####################-->
+        <div class='row'>
+          <div class='col-md-12'>
+            <blockquote>
+              <p>I'm a junior web developer and just graduated from O'Reilly
+                School of Technology. I'm looking forward to contributing my skills
+                with a great company, and to learn as much as I can along the way.
+                Check out what I have accomplished so far.</p>
+
+              </blockquote>
+
+            </div>
+
         </div>
 
-        <div class="githublink">
-          <a href="projects"><p>Project Details</p></a>
-        </div>
 
-        <ul id="gallery">
 
-          <li>
-            <a class="pichover" href="http://www.peachyplanet.us">
-              <img src="static/img/peachyplanet.png" alt="">
-              <p>Basic social site built with flask, bcrypt, wtforms, and peewee.</p>
-            </a>
+<!--################### end of source and project links ###################-->
+          <div class='row'>
+              <div class=' col-sm-12 col-md-6 col-lg-4'>
+                <div  class="panel panel-default panel-primary panel-primary">
+                  <div class='panel-heading'>
+                    <h1 class='panel-title'><a href="http://www.peachyplanet.us" >Peachy Planet</h1></a>
+                  </div>
+                  <div class='panel-body'>
 
-          </li>
+                    <a class='btn btn-default btn-lg btn-block' href="https://github.com/2achary/peachy_planet">View source code</a>
 
-          <li>
-            <a class="pichover" href="lightbox">
-              <img src="static/img/lightboxshot.png" alt="">
-              <p>Light box gallery coded with jQuery</p>
-            </a>
+                    <p><a href="http://www.peachyplanet.us">www.peachyplanet.us</a></p>
 
-          </li>
+                    <p>
+                        The idea is co-workers of a small company may work with
+                        different people on different projects. This is a way for
+                        them to follow and unfollow each other as needed to stay
+                        up to date on each other's progress etc.
+                    </p>
 
-          <li>
-            <a class="pichover" href="http://www.taskdaddy.info">
-              <img src="static/img/taskdaddy2.png" alt="">
-              <p>To-do list application built with Python and Django</p>
-            </a>
-          </li>
+                    <p>This was derived from a team treehouse tutorial by Kenneth Love</p>
 
-        </ul>
-      </section>
-      <footer>
-        <a href="http://twitter.com/zachswift"><img src="static/img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
-        <a href="http://facebook.com/zachswiftmusic"><img src="static/img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
-        <p>&copy; 2015 Zach Swift</p>
-      </footer>
-    </div>
+                    <p>It is a very basic social website built with </p>
+
+                    <ul>
+                    <li><p>Python and Flask for the MVC web framework</p></li>
+                    <li><p>Bcrypt was used for hashing passwords</p></li>
+                    <li><p>wtforms was used for the forms and validation</p></li>
+                    <li><p>Flask-login was used for authentication</p></li>
+                    <li><p>Peewee was used as the ORM for the database.</p></li>
+                    <li><p>HTML, CSS, and JavaScript were used for the GUI</p></li>
+                    </ul>
+
+                    <p><a href="http://www.peachyplanet.us" target="_blank"><img class='img-responsive img-thumbnail' src="https://github.com/2achary/peachy_planet/raw/master/static/img/peachyplanet.PNG" alt="alt text" title="Screen Shot of website" ></a></p>
+                </div>
+              </div>
+              </div>
+
+
+
+                  <div class='col-sm-12 col-md-6 col-lg-4'>
+                    <div  class="panel panel-default panel-primary panel-primary">
+                      <div class='panel-heading'>
+                        <h1 class='panel-title'><a href="http://www.cellmefood.com" >Cell Me Food</h1></a>
+                      </div>
+                      <div class='panel-body'>
+
+                        <a class='btn btn-default btn-lg btn-block' href="https://github.com/WTFox/cellmefood">View source code</a>
+
+                        <p><a href="http://www.peachyplanet.us">www.cellmefood.com</a></p>
+
+                        <h3>Built for Hack Tennessee 7</h3>
+
+                        <p>
+                          Text the name of a food to our number, and get a recipe
+                          back with that ingredient. Once you click the link to
+                          the recipe, you can add the ingredients to your shopping
+                          list, and check things off. You can also specify a food
+                          category.
+                        </p>
+
+                        <p>We had a team of six programmers working on this project
+                        for hack tennessee 7 over the course of 48 hours.</p>
+
+                        <p>Tech Stack</p>
+
+                        <ul>
+                        <li><p>Python and Flask for the MVC web framework/middleware</p></li>
+                        <li><p>HTML/CSS/JavaScript/jQuery</p></li>
+                        <li><p>Microsoft SQL Server</p></li>
+                        <li><p>Twilio for SMS API</p></li>
+
+                        </ul>
+
+                        <p><a href="http://www.cellmefood.com" target="_blank"><img class='img-responsive img-thumbnail' src="/static/img/cellmefood.png" alt="alt text" title="Screen Shot of website" ></a></p>
+                    </div>
+                  </div>
+                  </div>
+
+
+
+              <div class='  col-sm-12 col-md-6 col-lg-4'>
+                <div class='panel panel-default panel-primary '>
+
+                    <div class='panel-heading'>
+                      <h1 class='panel-title'><a  href="http://www.taskdaddy.info" >TaskDaddy</h1></a>
+                    </div>
+                    <div  class="panel-body">
+                    <a class='btn btn-default btn-lg btn-block' href="https://github.com/2achary/superlists">View source code</a>
+
+                    <p><a href="http://www.taskdaddy.info">http://www.taskdaddy.info</a></p>
+
+                    <p>This is the project "superlists" from the book "Test Driven Development with Python"
+                    <strong>Still in progress</strong></p>
+
+                    <h3>
+                    <a id="user-content-details" class="anchor" href="#details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Details</h3>
+
+                    <p>-Demonstrating knowledge of Python/Django Unit testing and Functional Testing. </p>
+
+                    <p>-Demonstrates Version Control best practices with Git and Github</p>
+
+                    <p>-Demonstrates Python-Fabric deployment automation</p>
+
+                    <p>-Uses a URL design inspired by REST e.g. each list has is own url.</p>
+
+                    <p>-Uses Django's built in ORM to interact with sqLite Database.</p>
+
+
+
+                    <p><a href="https://github.com/2achary/superlists/blob/master/taskdaddy.png" target="_blank"><img class='img-responsive img-thumbnail' src="https://github.com/2achary/superlists/raw/master/taskdaddy.png" alt="alt text" style="max-width:100%;"></a></p>
+                </div>
+              </div>
+              </div>
+
+
+
+              <div class=' col-sm-12 col-md-6 col-lg-4'>
+                <div  class="panel panel-default panel-primary" >
+                  <div class='panel-heading'>
+                    <h1 class='panel-title'><a href="http://2achary.pythonanywhere.com">Place Holder Image Server</h1></a>
+                  </div>
+
+                  <div class='panel-body'>
+                    <a class='btn btn-default btn-lg btn-block' href="https://github.com/2achary/placeholder">View source code</a>
+
+                    <p><a href="http://2achary.pythonanywhere.com">2achary.pythonanywhere.com</a></p>
+
+                    <p>This server can be used for serving placeholder images for any web page.</p>
+
+                    <p>To request a placeholder image of a given width and height simply include an image with the source pointing to /placeholder/x/ on this server such as:</p>
+
+                    <p><code>&lt;img src="http://localhost:8000/image/50x50/" &gt;</code></p>
+
+                    <h3>
+                    <a id="user-content-details" class="anchor" href="#details" aria-hidden="true"><span class="octicon octicon-link"></span></a>Details</h3>
+
+                    <p>This project demonstrates the ability to
+                    use Django in a single file fashion taking
+                    advantage of it's decoupled nature. For example,
+                    the <code>django-admin startproject</code> command was
+                    never used to create the folder structure.</p>
+
+                    <p><a href="https://2achary.pythonanywhere.com" target="_blank"><img class='img-responsive img-thumbnail' src="https://github.com/2achary/placeholder/raw/master/placeholder.png"></a></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class=' col-sm-12 col-md-6 col-lg-4'>
+                <div  class="panel panel-default panel-primary" >
+                    <div class='panel-heading'>
+                      <h1m class='panel-title'><a href="http://github.com/2achary/Email-Program">Email-Application</h1></a>
+                    </div>
+                    <div class='panel-body'>
+
+                        <a class='btn btn-default btn-lg btn-block' href="https://github.com/2achary/Email-Program">View source code</a>
+
+                    <p>MySQL, Database-backed email search and display application</p>
+
+                    <p>This was a school project and the end result was a very
+                    rough 'alpha' version of a program. But it demonstrates
+                    understanding of databases, Graphical User Interfaces,
+                    Python email objects, and overall object oriented concepts</p>
+
+                    <h5>Project uses</h5>
+                    <ul>
+                        <li>Python 3</li>
+                        <li>MySQL</li>
+                        <li>Handling email objects in Python</li>
+                        <li>Relational database design and creation</li>
+                        <li>Tkinter GUI python library</li>
+                    </ul>
+
+                    <p><a href="https://github.com/2achary/Email-Program" target="_blank"><img class='img-responsive img-thumbnail' src="https://github.com/2achary/Email-Program/raw/master/emailgui.png" alt="alt text" title="Screen shot of application running" style="max-width:100%;"></a></p>
+                </div>
+              </div>
+              </div>
+
+          </div>
+
+
+
+
+<!--################### begin footer #################################-->
+
+          <p>&copy; 2015 Zach Swift</p>
+
+<!--################### end footer #################################-->
+
+</div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="/static/js/bootstrap.min.js"></script>
+
   </body>
+<!--################### end body #################################-->
 </html>
