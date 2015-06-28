@@ -35,7 +35,12 @@ def sms(request):
         msg = "13579#"
         r = Response()
         r.message(msg)
-    return r
+        return r
+    else:
+        msg = "Didn't recognize that command."
+        r = Response()
+        r.message(msg)
+        return r
     #
     # fromnum = "+" + request.GET.get("From")[2:]
     # account_sid = "AC5d7ec2b523b18b015df1e251394e0c62"
