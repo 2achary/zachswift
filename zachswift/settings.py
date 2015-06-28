@@ -25,7 +25,8 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
-
+TWILIO_ACCOUNT_SID = "AC5d7ec2b523b18b015df1e251394e0c62"
+TWILIO_AUTH_TOKEN = "c56a669bfcbe7c2ac8e27f0ff4268950"
 
 # Application definition
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'django_twilio',
 )
 
 MIDDLEWARE_CLASSES = (
