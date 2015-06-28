@@ -25,12 +25,12 @@ def spoiler(request):
 def projects(request):
     return render(request, 'projects.html')
 
-def sms(fromnum, body):
-
+def sms(request):
+    fromnum = "+" + request["From"][2:]
     account_sid = "AC5d7ec2b523b18b015df1e251394e0c62"
     auth_token  = "c56a669bfcbe7c2ac8e27f0ff4268950"
     client = TwilioRestClient(account_sid, auth_token)
-    if "gym" in body.lower():
+    if "gym" in request['Body'].lower():
         msg = "13579#"
         message = client.messages.create(body=msg, to=fromnum, from_='+16155490818')
         return message.sid
