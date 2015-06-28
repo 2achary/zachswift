@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'taskdaddy', 'portfolio.views.taskdaddy', name='taskdaddy'),
     url(r'spoiler', 'portfolio.views.spoiler', name='spoiler'),
     url(r'projects', 'portfolio.views.projects', name='projects'),
+    url(r'sms', 'portfolio.views.sms', name='sms'),
 
 
     #url(r'^admin/', include(admin.site.urls)),
