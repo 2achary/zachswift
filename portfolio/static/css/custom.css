@@ -1,6 +1,6 @@
 .panel-body {
 
-    height: 500px;
+    min-height: 550px;
 
 }
 
@@ -8,10 +8,8 @@
     margin-bottom: 15px;
 }
 
-.img-responsive {
-    max-width: 300px;
-}
+
 
 * {
-overflow: scroll;
+
 }
