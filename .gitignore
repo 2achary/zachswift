@@ -1,0 +1,3 @@
+*.pyc
+zachswift/__pycache__/*
+db*
