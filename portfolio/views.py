@@ -2,6 +2,7 @@ from django.shortcuts import render
 from twilio.rest import TwilioRestClient
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
+from .models import Profile, Python, Web
 
 def home(request):
     return render(request, 'index.html')
@@ -10,7 +11,11 @@ def about(request):
     return render(request, 'about.html')
 
 def resume(request):
-    return render(request, 'resume.html')
+    tagline = Profile.objects.all()[0].tagline
+    libraries = ', '.join([obj.library for obj in Python.objects.all()])
+    web = ', '.join([obj.lang for obj in Web.objects.all()])
+    return render(request, 'resume.html', {'tagline': tagline, 'libraries': libraries,
+                                           'web': web})
 
 def contact(request):
     return render(request, 'contact.html')
