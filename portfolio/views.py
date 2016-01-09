@@ -2,7 +2,9 @@ from django.shortcuts import render
 from twilio.rest import TwilioRestClient
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
-from .models import Profile, Python, Web
+from .models import Profile, Python, Web, WorkHistory
+from dateutil.parser import parse
+import datetime
 
 def home(request):
     return render(request, 'index.html')
@@ -14,8 +16,17 @@ def resume(request):
     tagline = Profile.objects.all()[0].tagline
     libraries = ', '.join([obj.library for obj in Python.objects.all()])
     web = ', '.join([obj.lang for obj in Web.objects.all()])
+    work = WorkHistory.objects.order_by('-start_date')
+    for obj in work:
+        obj.title = obj.title.upper()
+        obj.company = obj.company.upper()
+        obj.location = obj.location.upper()
+        obj.start_date = obj.start_date.strftime('%B %Y').upper()
+        if obj.end_date:
+            obj.end_date = obj.end_date.strftime('%B %Y').upper()
+
     return render(request, 'resume.html', {'tagline': tagline, 'libraries': libraries,
-                                           'web': web})
+                                           'web': web, 'work': work})
 
 def contact(request):
     return render(request, 'contact.html')

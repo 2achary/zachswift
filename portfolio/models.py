@@ -52,7 +52,7 @@ class General(models.Model):
 class WorkHistory(models.Model):
     company = models.CharField(max_length=75)
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
     title = models.CharField(max_length=50)
     location = models.CharField(max_length=75)
     description = models.TextField()

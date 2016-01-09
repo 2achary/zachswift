@@ -111,28 +111,37 @@
 
 		<h3>EXPERIENCE</h3>
 
-            <p>
-                <h5>PYTHON DEVELOPER, HEALTHWAYS | FRANKLIN, TN | MAY 2015 TO PRESENT</h5>
-                Worked on a small team to develop a file ingestion engine that greatly reduces the cost of bringing on new clients.
-                Developed an auditing system to help give valuable business insight. Maintained, extended
-                and continuously deployed existing messaging exchange system. Worked with and extended company REST APIs
-                for various purposes.
-            </p>
-			<p>
-				<h5>GENERAL MANAGER, THE MAILROOM, INC. | NASHVILLE, TN | FEBRUARY 2012 TO MAY 2015</h5>
-				Started at The Mailroom as a general laborer, handling customer orders, managing online stores,
-                and tracking inventory for clients. Was promoted to manager in April 2014, dealing with clients,
-                preparing estimates, and scheduling daily operations. Streamlined workflow with python scripting
-                by automating various daily and weekly tasks. Created, and maintained several E-commerce websites for our clients.
-			</p>
+			{% for job in work %}
 
-			<p>
-				<h5>SALES REPRESENTATIVE, DELL | NASHVILLE TN 2011 2012</h5>
-				Worked at Dell’s call center and helped customers choose the most
-				appropriate computer solution for their needs. Completed Dell’s computer
-				training program and continually exceeded sales expectations.
+				<p>
+					<h5>{{job.title}}, {{job.company}} | {{job.location}} | {{job.start_date}} TO {% if job.end_date %} {{job.end_date}} {% else %} PRESENT {% endif %}</h5>
 
-			</p>
+					{{job.description}}
+				</p>
+			{% endfor %}
+
+            <!--<p>-->
+                <!--<h5>PYTHON DEVELOPER, HEALTHWAYS | FRANKLIN, TN | MAY 2015 TO PRESENT</h5>-->
+                <!--Worked on a small team to develop a file ingestion engine that greatly reduces the cost of bringing on new clients.-->
+                <!--Developed an auditing system to help give valuable business insight. Maintained, extended-->
+                <!--and continuously deployed existing messaging exchange system. Worked with and extended company REST APIs-->
+                <!--for various purposes.-->
+            <!--</p>-->
+			<!--<p>-->
+				<!--<h5>GENERAL MANAGER, THE MAILROOM, INC. | NASHVILLE, TN | FEBRUARY 2012 TO MAY 2015</h5>-->
+				<!--Started at The Mailroom as a general laborer, handling customer orders, managing online stores,-->
+                <!--and tracking inventory for clients. Was promoted to manager in April 2014, dealing with clients,-->
+                <!--preparing estimates, and scheduling daily operations. Streamlined workflow with python scripting-->
+                <!--by automating various daily and weekly tasks. Created, and maintained several E-commerce websites for our clients.-->
+			<!--</p>-->
+
+			<!--<p>-->
+				<!--<h5>SALES REPRESENTATIVE, DELL | NASHVILLE TN 2011 2012</h5>-->
+				<!--Worked at Dell’s call center and helped customers choose the most-->
+				<!--appropriate computer solution for their needs. Completed Dell’s computer-->
+				<!--training program and continually exceeded sales expectations.-->
+
+			<!--</p>-->
 
 
 
