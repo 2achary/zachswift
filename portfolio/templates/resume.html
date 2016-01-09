@@ -1,164 +1,120 @@
 <!DOCTYPE html>
 <html>
-<!--################### begin head #################################-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/static/css/custom.css" rel="stylesheet">
+
 		<script src="/static/js/respond.js"></script>
-    <title>Zach Swift | Web Developer</title>
-  </head>
-<!--################### end head #################################-->
+		<title>Zach Swift | Web Developer</title>
+		<style>
+			.no-top td{
+				padding-right: 15px;
+				padding-top: 0px;
+			}
+		</style>
 
-<!--################### start body #################################-->
-  <body>
-    <div class="container">
+  	</head>
+	<body>
+    	<div class="container">
 
-<!--################### begin nav bar #################################-->
+			<header class='page-header'>
 
-          <header class='page-header'>
+				<ul class='nav nav-pills pull-right'>
 
-            <ul class='nav nav-pills pull-right'>
+					<li><a href="about" ><h4>About</h4></a></li>
 
-                <li><a href="about" ><h4>About</h4></a></li>
+					<li class='active'><a href="resume"><h4>Resume</h4></a></li>
 
+					<li><a href="contact" ><h4>Contact</h4></a></li>
 
-                <li class='active'><a href="resume"><h4>Resume</h4></a></li>
+				</ul><!--end navbar-->
 
+				<a href="/"><h1>{{contact.name}}</h1></a>
 
-                <li><a href="contact" ><h4>Contact</h4></a></li>
-
-            </ul><!--end navbar-->
-            <a href="/"><h1>Zach Swift</h1></a>
-          </header>
-
-<!--################### end of header #################################-->
-
-<div class='row'>
-	<div class='col-md-8'>
-
-	<h4 class="contactline"><a href="tel:615-509-9910">615-509-9910</a> | <a href="mailto:zacharyswift@gmail.com">zacharyswift@gmail.com</a> | <a href='/'>zachswift.me</a></h4>
+			</header>
 
 
+			<div class='row'>
+				<div class='col-md-8'>
+					<table class="no-top" >
 
-	<h3>PROFILE</h3>
-	<p>
+						<tr>
+							<td><a href="tel:{{contact.phone}}">{{contact.phone}}</a> </td>
+							<td><a href="mailto:{{contact.email}}">{{contact.email}}</a> </td>
+							<td><a href='/'>{{contact.website}}</a></td>
+						</tr>
 
-		{{ tagline }}
+					</table>
 
-	</p>
+					<h3>PROFILE</h3>
+					<p>
 
-	<h3>SKILLS</h3>
-	<table class='table'>
+						{{ tagline }}
 
-		<tr>
-			<td>Python</td><td>{{libraries}}</td>
-		</tr>
+					</p>
 
-		<tr>
-			<td>Web</td> <td>{{web}}</td>
-		</tr>
+					<h3>SKILLS</h3>
+					<table class='table'>
 
-		<tr>
-			<td>Data/Messaging</td> <td>RabbitMQ, Elasticsearch, Kibana, Couchbase Server, MySQL,
-			SQLite3, D3.js, Peewee, twilio</td>
-		</tr>
+						<tr>
+							<th>Python</th><td>{{libraries}}</td>
+						</tr>
 
-		<tr>
-			<td>Testing</td> <td>Unittest, Doctest, Selenium</td>
-		</tr>
+						<tr>
+							<th>Web</th> <td>{{web}}</td>
+						</tr>
 
-		<tr>
-			<td>OS</td><td>Ubuntu, Debian, Windows 7 and 8, Mac OSX</td>
-		</tr>
+						<tr>
+							<th>Data/Messaging</th> <td>RabbitMQ, Elasticsearch, Kibana, Couchbase Server, MySQL,
+							SQLite3, D3.js, Peewee, twilio</td>
+						</tr>
 
-		<tr>
-			<td>Deployment</td><td>Fabric automation, Installing SSL Certificates,
-            Nginx, Python Anywhere</td>
-		</tr>
+						<tr>
+							<th>Testing</th> <td>{{testing}}</td>
+						</tr>
 
-		<td>General Programming</td><td>Git version control, Unit Testing,
-		Functional Testing, Paired Programming, Linux command line, object oriented
-		techniques, regular expressions, API design, logging,
-		date and time manipulation, multiprocessing
-</td>
-	</tr>
+						<tr>
+							<th>OS</th><td>{{OS}}</td>
+						</tr>
 
-	</table>
+						<tr>
+							<th>Deployment</th><td>{{deployment}}</td>
+						</tr>
 
-        <h3>EDUCATION</h3>
-        <table class='table'>
+						<th>General Programming</th><td>{{general}}</td>
+					</tr>
 
-            <tr>
-                <td>O'Reilly School of Technology</td><td>Online</td><td>2014-2015</td><td>Python Programming Certificate</td>
-            </tr>
+					</table>
 
-            <tr>
-                <td>Convervatory of Recording Arts and Sciences</td><td>Tempe AZ</td><td>2008-2009</td><td>Master Recording Program</td>
-            </tr>
+					<h3>EDUCATION</h3>
+					<table class='table'>
 
-            <tr>
-                <td>SEMO University</td><td>Sikeston MO</td><td>2006</td><td>General Studies</td>
-            </tr>
+						{% for school in education%}
+						<tr>
+							<td>{{school.school}}</td><td>{{school.location}}</td><td>{{school.start_date}} - {{school.end_date}} </td><td>{{school.subject}}</td>
+						</tr>
+						{% endfor %}
 
+					</table>
 
-             <tr>
-                <td>Sikeston Senior High</td><td>Sikeston MO</td><td>2005</td><td>High School Diploma</td>
-            </tr>
+					<h3>EXPERIENCE</h3>
 
-        </table>
+						{% for job in work %}
 
-		<h3>EXPERIENCE</h3>
+							<div class="panel panel-default">
+							<div class="panel-heading">{{job.title}}, {{job.company}} | {{job.location}} | {{job.start_date}} TO {% if job.end_date %} {{job.end_date}} {% else %} PRESENT {% endif %}</div>
 
-			{% for job in work %}
+								<div class="panel-body">
+									{{job.description}}
+								</div>
+							</div>
+						{% endfor %}
 
-				<p>
-					<h5>{{job.title}}, {{job.company}} | {{job.location}} | {{job.start_date}} TO {% if job.end_date %} {{job.end_date}} {% else %} PRESENT {% endif %}</h5>
+					<h3 style="padding-bottom:50px;"><a href="{{contact.email}}">EMAIL</a> FOR REFERENCES</h3>
 
-					{{job.description}}
-				</p>
-			{% endfor %}
-
-            <!--<p>-->
-                <!--<h5>PYTHON DEVELOPER, HEALTHWAYS | FRANKLIN, TN | MAY 2015 TO PRESENT</h5>-->
-                <!--Worked on a small team to develop a file ingestion engine that greatly reduces the cost of bringing on new clients.-->
-                <!--Developed an auditing system to help give valuable business insight. Maintained, extended-->
-                <!--and continuously deployed existing messaging exchange system. Worked with and extended company REST APIs-->
-                <!--for various purposes.-->
-            <!--</p>-->
-			<!--<p>-->
-				<!--<h5>GENERAL MANAGER, THE MAILROOM, INC. | NASHVILLE, TN | FEBRUARY 2012 TO MAY 2015</h5>-->
-				<!--Started at The Mailroom as a general laborer, handling customer orders, managing online stores,-->
-                <!--and tracking inventory for clients. Was promoted to manager in April 2014, dealing with clients,-->
-                <!--preparing estimates, and scheduling daily operations. Streamlined workflow with python scripting-->
-                <!--by automating various daily and weekly tasks. Created, and maintained several E-commerce websites for our clients.-->
-			<!--</p>-->
-
-			<!--<p>-->
-				<!--<h5>SALES REPRESENTATIVE, DELL | NASHVILLE TN 2011 2012</h5>-->
-				<!--Worked at Dell’s call center and helped customers choose the most-->
-				<!--appropriate computer solution for their needs. Completed Dell’s computer-->
-				<!--training program and continually exceeded sales expectations.-->
-
-			<!--</p>-->
-
-
-
-
-				<h3><a href="mailto:zacharyswift@gmail.com">EMAIL</a> FOR REFERENCES</h3>
-
-
-
-				<table class="table">
-					<tr><td>Nathan ****</td> <td>Former Manager</td> <td>Web Developer</td> <td>***-***-****</td></tr>
-					<tr><td>Matt ****</td> <td>Friend</td> <td>Software Developer</td> <td>***-***-****</td></tr>
-					<tr><td>Russ ****</td> <td>Former Employer</td> <td>Owner</td><td>***-***-****</td></tr>
-					<tr><td>Mike ****</td> <td>Former Manager</td> <td>EXA</td><td>***-***-****</td></tr>
-				</table>
-
-</div>
-</div>
-</div>
-</body>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

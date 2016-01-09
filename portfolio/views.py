@@ -2,7 +2,7 @@ from django.shortcuts import render
 from twilio.rest import TwilioRestClient
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
-from .models import Profile, Python, Web, WorkHistory
+from .models import Profile, Python, Web, WorkHistory, Contact, Education, General, OS, Deployment, Testing
 from dateutil.parser import parse
 import datetime
 
@@ -16,6 +16,11 @@ def resume(request):
     tagline = Profile.objects.all()[0].tagline
     libraries = ', '.join([obj.library for obj in Python.objects.all()])
     web = ', '.join([obj.lang for obj in Web.objects.all()])
+    contact = Contact.objects.all()[0]
+    general = ', '.join([obj.name for obj in General.objects.all()])
+    deployment = ', '.join([obj.name for obj in Deployment.objects.all()])
+    testing = ', '.join([obj.name for obj in Testing.objects.all()])
+    os = ', '.join([obj.name for obj in OS.objects.all()])
     work = WorkHistory.objects.order_by('-start_date')
     for obj in work:
         obj.title = obj.title.upper()
@@ -25,8 +30,24 @@ def resume(request):
         if obj.end_date:
             obj.end_date = obj.end_date.strftime('%B %Y').upper()
 
-    return render(request, 'resume.html', {'tagline': tagline, 'libraries': libraries,
-                                           'web': web, 'work': work})
+    education = Education.objects.order_by('-start_date')
+    for obj in education:
+        obj.start_date = obj.start_date.strftime('%Y').upper()
+        if obj.end_date:
+            obj.end_date = obj.end_date.strftime('%Y').upper()
+
+    return render(request, 'resume.html', {
+        'tagline': tagline,
+        'libraries': libraries,
+        'web': web, 'work': work,
+        'contact': contact,
+        'education': education,
+        'general': general,
+        'deployment': deployment,
+        'testing': testing,
+        'OS': os,
+
+    })
 
 def contact(request):
     return render(request, 'contact.html')
