@@ -3,8 +3,6 @@ from twilio.rest import TwilioRestClient
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
 from .models import Profile, Python, Web, WorkHistory, Contact, Education, General, OS, Deployment, Testing
-from dateutil.parser import parse
-import datetime
 
 def home(request):
     return render(request, 'index.html')
