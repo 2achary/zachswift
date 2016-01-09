@@ -5,7 +5,9 @@ from twilio.twiml import Response
 from .models import Profile, Python, Web, WorkHistory, Contact, Education, General, OS, Deployment, Testing
 
 def home(request):
-    return render(request, 'index.html')
+    tagline = Profile.objects.all()[0].tagline
+
+    return render(request, 'index.html', {'tagline':tagline})
 
 def about(request):
     return render(request, 'about.html')
