@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^spoiler', 'portfolio.views.spoiler', name='spoiler'),
     url(r'^projects', 'portfolio.views.projects', name='projects'),
     url(r'^sms', 'portfolio.views.sms', name='sms'),
+    url(r'^blog', 'portfolio.views.blog'),
 
 
     url(r'^admin/', include(admin.site.urls)),

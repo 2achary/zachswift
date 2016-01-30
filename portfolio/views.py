@@ -1,13 +1,34 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.paginator import Paginator
 from twilio.rest import TwilioRestClient
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
-from .models import Profile, Python, Web, WorkHistory, Contact, Education, General, OS, Deployment, Testing
+from .models import Profile, Python, Web, WorkHistory, Contact, Education, General, OS, Deployment, Testing, Blog
 
 def home(request):
     tagline = Profile.objects.all()[0].tagline
 
     return render(request, 'index.html', {'tagline':tagline})
+
+def blog(request):
+
+    blog_list = Blog.objects.order_by('-date_ts')
+    for blog in blog_list:
+        blog.date_ts = blog.date_ts.strftime('%B %d, %Y')
+    paginator = Paginator(blog_list, 2) # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    try:
+        blogs = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        blogs = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        blogs = paginator.page(paginator.num_pages)
+
+    return render(request, 'blog.html', {'blogs': blogs})
 
 def about(request):
     return render(request, 'about.html')

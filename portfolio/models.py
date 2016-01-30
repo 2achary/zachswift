@@ -25,6 +25,11 @@ class Data(models.Model):
     def __str__(self):
         return self.name
 
+class Blog(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    date_ts = models.DateTimeField()
+
 class Testing(models.Model):
     name = models.CharField(max_length=40)
 
