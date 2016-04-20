@@ -7,11 +7,13 @@ class Profile(models.Model):
     # def __str__(self):
     #     return self.tagline
 
+
 class Python(models.Model):
     library = models.CharField(max_length=100)
 
     def __str__(self):
         return self.library
+
 
 class Web(models.Model):
     lang = models.CharField(max_length=100)
@@ -19,16 +21,19 @@ class Web(models.Model):
     def __str__(self):
         return self.lang
 
+
 class Data(models.Model):
     name = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name
 
+
 class Blog(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_ts = models.DateTimeField()
+
 
 class Testing(models.Model):
     name = models.CharField(max_length=40)
@@ -36,11 +41,13 @@ class Testing(models.Model):
     def __str__(self):
         return self.name
 
+
 class OS(models.Model):
     name = models.CharField(max_length=40)
 
     def __str__(self):
         return self.name
+
 
 class Deployment(models.Model):
     name = models.CharField(max_length=40)
